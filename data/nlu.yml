@@ -1,0 +1,31 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - see you later
+
+- intent: check_balance
+  examples: |
+    - What's my balance?
+    - How much money do I have?
+    - Show me my account balance
+
+- intent: add_money
+  examples: |
+    - Add [100](amount) dollars to my account
+    - Deposit [200](amount) dollars
+    - Add [50](amount) dollars
+
+- intent: remove_money
+  examples: |
+    - Withdraw [50](amount) dollars
+    - Remove [100](amount) dollars from my account
+    - Take out [200](amount) dollars
