@@ -4,7 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from typing import Any, Text, Dict, List
 
-# Database connection function
+
 def db_connect():
     return pymysql.connect(
         host="localhost",
@@ -15,7 +15,7 @@ def db_connect():
     )
 
 def extract_amount(text: Text) -> float:
-    # Extract amount using a regular expression
+    
     match = re.search(r'\b\d+(?:\.\d{1,2})?\b', text)
     if match:
         return float(match.group(0))
