@@ -6,15 +6,34 @@ intents:
   - check_balance
   - add_money
   - remove_money
+  - transfer_funds
+  - create_account
+  - delete_account
+  # - list_all
 
 entities:
   - amount
+  - recipient
+  - name
+  - initial_balance
 
 slots:
   amount:
     type: float
     influence_conversation: true
 
+  recipient:
+    type: text
+    influence_conversation: true
+
+  name:
+    type: text
+    influence_conversation: true
+
+  initial_balance:
+    type: float
+    influence_conversation: true
+    
 responses:
   utter_greet:
     - text: "Hello! How can I assist you today?"
@@ -43,3 +62,7 @@ actions:
   - action_check_balance
   - action_add_money
   - action_remove_money
+  - action_transfer_funds
+  - action_create_account
+  - action_delete_account
+  # - action_list_all_accounts

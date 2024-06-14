@@ -14,18 +14,42 @@ nlu:
 
 - intent: check_balance
   examples: |
-    - What's my balance?
-    - How much money do I have?
-    - Show me my account balance
+    - What's [John Doe](name)'s balance?
+    - How much money does [John Doe](name) have?
+    - Show me [John Doe](name)'s account balance
 
 - intent: add_money
   examples: |
-    - Add [100](amount) dollars to my account
-    - Deposit [200](amount) dollars
-    - Add [50](amount) dollars
+    - Add [100](amount) dollars to [John Doe](name)'s account
+    - Deposit [200](amount) dollars to [John Doe](name)
+    - Add [50](amount) dollars to [John Doe](name)
 
 - intent: remove_money
   examples: |
-    - Withdraw [50](amount) dollars
-    - Remove [100](amount) dollars from my account
-    - Take out [200](amount) dollars
+    - Withdraw [50](amount) dollars from [John Doe](name)'s account
+    - Remove [100](amount) dollars from [John Doe](name)'s account
+    - Take out [200](amount) dollars from [John Doe](name)'s account
+
+- intent: transfer_funds
+  examples: |
+    - Transfer [100](amount) dollars from [John Doe](name) to [Jane Doe](recipient)
+    - Send [200](amount) dollars from [John Doe](name) to [Alice](recipient)
+    - Give [50](amount) dollars from [John Doe](name) to [Bob](recipient)
+
+- intent: create_account
+  examples: |
+    - Create an account for [Charlie](name) with [500](initial_balance) dollars
+    - Open an account for [David](name) with [1000](initial_balance) dollars
+    - Set up an account for [Eve](name) with [250](initial_balance) dollars
+
+- intent: delete_account
+  examples: |
+    - Delete the account for [Frank](name)
+    - Remove the account for [Grace](name)
+    - Close the account for [Hannah](name)
+
+# - intent: list_all
+#   examples: |
+#     - List all accounts
+#     - Show me the list of accounts
+#     - Display all accounts
