@@ -10,7 +10,7 @@ intents:
   - create_account
   - delete_account
   # - list_all
-
+  
 entities:
   - amount
   - recipient
